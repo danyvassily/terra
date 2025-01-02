@@ -123,21 +123,24 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen font-['Cormorant_Garamond']">
+    <div className="min-h-screen w-full overflow-x-hidden font-['Cormorant_Garamond']">
       <BackgroundGradient />
       <Navbar />
       
       {/* Section Héro */}
       <motion.section 
-        className="relative h-screen"
+        className="relative h-screen w-full"
         ref={addToRefs}
       >
-        <img 
-          ref={addToImagesRefs}
-          src={heroImage}
-          alt="Collection Printemps-Été 2024"
-          className="w-full h-full object-cover"
-        />
+        <div className="w-full h-full">
+          <img 
+            ref={addToImagesRefs}
+            src={heroImage}
+            alt="Collection Printemps-Été 2024"
+            className="w-full h-full object-cover"
+            loading="eager"
+          />
+        </div>
         <div className="absolute inset-0 bg-black/30"></div>
         <div 
           ref={addToTextsRefs}
@@ -166,7 +169,7 @@ const Home = () => {
       </section>
 
       {/* Collection en Vedette */}
-      <section ref={addToRefs} className="py-20 bg-gray-50 overflow-hidden">
+      <section ref={addToRefs} className="py-20 bg-gray-50 overflow-hidden w-full">
         <div className="container mx-auto px-4">
           <h2 
             ref={addToTextsRefs}
@@ -175,20 +178,22 @@ const Home = () => {
             COLLECTION SIGNATURE
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="relative group">
+            <div className="relative group w-full h-[600px]">
               <img 
                 ref={addToImagesRefs}
                 src={jeuneFemmeImage}
                 alt="femme jeune qui marche" 
-                className="w-full object-cover h-[600px] rounded-lg"
+                className="w-full h-full object-cover rounded-lg"
+                loading="lazy"
               />
             </div>
-            <div className="relative group">
+            <div className="relative group w-full h-[600px]">
               <img 
                 ref={addToImagesRefs}
                 src={page2Image}
                 alt="tshirt" 
-                className="w-full object-cover h-[600px] rounded-lg"
+                className="w-full h-full object-cover rounded-lg"
+                loading="lazy"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-white/90 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <h3 className="text-xl font-light mb-2">T-shirt</h3>
@@ -200,23 +205,9 @@ const Home = () => {
       </section>
 
       {/* Section Développement Durable */}
-      <section ref={addToRefs} className="py-20 bg-white overflow-hidden">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div 
-            ref={addToTextsRefs}
-            className="text-center space-y-8"
-          >
-            <h2 className="text-3xl md:text-4xl font-light">NOTRE ENGAGEMENT</h2>
-            <p className="text-lg md:text-xl font-light leading-relaxed">
-              Terra s&apos;engage dans une démarche écoresponsable, où chaque création est pensée 
-              pour minimiser son impact environnemental. Nos matériaux sont soigneusement 
-              sélectionnés pour leur qualité et leur durabilité.
-            </p>
-          </div>
-        </div>
-        <div className="container mx-auto px-4 max-w-6xl mt-16">
+      <section ref={addToRefs} className="py-20 bg-white overflow-hidden w-full">
+        <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            {/* Colonne de texte */}
             <div 
               ref={addToTextsRefs}
               className="text-center md:text-left space-y-8"
@@ -227,13 +218,13 @@ const Home = () => {
               </p>
             </div>
 
-            {/* Colonne avec image */}
-            <div className="relative h-[400px] overflow-hidden rounded-lg shadow-lg">
+            <div className="relative w-full h-[600px] overflow-hidden rounded-lg shadow-lg">
               <img 
                 ref={addToImagesRefs}
                 src={grosplanImage}
                 alt="Illustration engagement environnemental" 
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
           </div>
