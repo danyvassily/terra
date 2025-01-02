@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom';
 import terraLogo from '../assets/Terrat.png';
+import xLogo from '../assets/icons8-x-50.png';
+import facebookLogo from '../assets/icons8-facebook-50.png';
+import instagramLogo from '../assets/icons8-instagram-50.png';
 
 const Footer = () => {
   return (
@@ -12,19 +15,16 @@ const Footer = () => {
             <img src={terraLogo} alt="Terra Logo" className="h-10 mb-4" />
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <img src="/src/assets/icons8-x-50.png" alt="X" className="w-5 h-5" />
+                <img src={xLogo} alt="X" className="w-5 h-5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <img src="/src/assets/icons8-facebook-50.png" alt="Facebook" className="w-5 h-5" />
+                <img src={facebookLogo} alt="Facebook" className="w-5 h-5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <img src="/src/assets/icons8-instagram-50.png" alt="Instagram" className="w-5 h-5" />
+                <img src={instagramLogo} alt="Instagram" className="w-5 h-5" />
               </a>
             </div>
           </div>
-
-      
-  
 
           {/* Contact */}
           <div>

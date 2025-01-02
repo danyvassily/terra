@@ -10,6 +10,7 @@ import jeuneFemmeImage from '../assets/jeunefemme.png';
 import page2Image from '../assets/page 2.jpg';
 import grosplanImage from '../assets/grosplan1.png';
 import bikiniImage from '../assets/5.jpg';
+import pullImage from '../assets/4.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -222,8 +223,8 @@ const Home = () => {
             <div className="relative w-full h-[600px] overflow-hidden rounded-lg shadow-lg">
               <img 
                 ref={addToImagesRefs}
-                src={grosplanImage}
-                alt="Illustration engagement environnemental" 
+                src={pullImage}
+                alt="Pull en laine écologique" 
                 className="w-full h-full object-cover"
                 loading="lazy"
               />

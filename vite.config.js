@@ -7,8 +7,13 @@ export default defineConfig({
   base: "/terra/",
   plugins: [react()],
   build: {
+    outDir: "dist",
     assetsDir: "assets",
+    emptyOutDir: true,
     rollupOptions: {
+      input: {
+        main: resolve(__dirname, "index.html"),
+      },
       output: {
         assetFileNames: (assetInfo) => {
           let extType = assetInfo.name.split(".").at(1);
