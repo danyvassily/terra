@@ -9,6 +9,7 @@ import heroImage from '../assets/1.png';
 import jeuneFemmeImage from '../assets/jeunefemme.png';
 import page2Image from '../assets/page 2.jpg';
 import grosplanImage from '../assets/grosplan1.png';
+import bikiniImage from '../assets/5.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -232,7 +233,7 @@ const Home = () => {
       </section>
 
       {/* Derniers Produits */}
-      <section ref={addToRefs} className="py-20 bg-gray-50 flex justify-center items-center overflow-hidden">
+      <section ref={addToRefs} className="py-20 bg-gray-50 overflow-hidden w-full">
         <div className="container mx-auto px-4">
           <h2 
             ref={addToTextsRefs}
@@ -240,27 +241,28 @@ const Home = () => {
           >
             DERNIÈRES CRÉATIONS
           </h2>
-          <div className="container mx-auto px-4 max-w-4xl">
+          <div className="max-w-4xl mx-auto">
             {/* produits */}
-            <div className="group relative">
+            <div className="group relative w-full h-[600px] mb-12">
               <img 
                 ref={addToImagesRefs}
-                src="/src/assets/5.jpg" 
+                src={bikiniImage}
                 alt="Bikini top" 
-                className="w-full aspect-[3/4] object-cover rounded-lg box-shadow-lg"
+                className="w-full h-full object-cover rounded-lg shadow-lg"
+                loading="lazy"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-white/90 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <h3 className="text-lg font-light">Bikini top</h3>
-                <p className="text-base">200 €</p>
+              <div className="absolute bottom-0 left-0 right-0 bg-white/90 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h3 className="text-xl font-light mb-2">Bikini top</h3>
+                <p className="text-lg">200 €</p>
               </div>
             </div>
             
             {/* Call to action */}
             <div 
               ref={addToTextsRefs}
-              className="flex flex-col items-center justify-center p-8"
+              className="flex flex-col items-center justify-center p-8 mt-8"
             >
-              <h3 className="text-3xl md:text-4xl font-lighttracking-wider hover:text-green-500 transition-colors duration-300 cursor-pointer uppercase bg-black text-white p-4 hover:bg-gray-800 rounded-lg text-center">
+              <h3 className="text-3xl md:text-4xl font-light tracking-wider hover:text-green-500 transition-colors duration-300 cursor-pointer uppercase bg-black text-white p-6 hover:bg-gray-800 rounded-lg text-center">
                 Venez découvrir notre collection
               </h3>
             </div>
